@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/worldbestpartners/static/css/main.806ec030.chunk.css",
-    "main.js": "/worldbestpartners/static/js/main.d509e03c.chunk.js",
-    "main.js.map": "/worldbestpartners/static/js/main.d509e03c.chunk.js.map",
+    "main.css": "/worldbestpartners/static/css/main.13353883.chunk.css",
+    "main.js": "/worldbestpartners/static/js/main.4204425c.chunk.js",
+    "main.js.map": "/worldbestpartners/static/js/main.4204425c.chunk.js.map",
     "runtime-main.js": "/worldbestpartners/static/js/runtime-main.eeb15577.js",
     "runtime-main.js.map": "/worldbestpartners/static/js/runtime-main.eeb15577.js.map",
     "static/css/2.764ccc25.chunk.css": "/worldbestpartners/static/css/2.764ccc25.chunk.css",
-    "static/js/2.23280284.chunk.js": "/worldbestpartners/static/js/2.23280284.chunk.js",
-    "static/js/2.23280284.chunk.js.map": "/worldbestpartners/static/js/2.23280284.chunk.js.map",
+    "static/js/2.7079db64.chunk.js": "/worldbestpartners/static/js/2.7079db64.chunk.js",
+    "static/js/2.7079db64.chunk.js.map": "/worldbestpartners/static/js/2.7079db64.chunk.js.map",
     "index.html": "/worldbestpartners/index.html",
-    "precache-manifest.d60489e58ed3989fbdb04acb600526d2.js": "/worldbestpartners/precache-manifest.d60489e58ed3989fbdb04acb600526d2.js",
+    "precache-manifest.c500ce788f0c8317667ca7ea02263f75.js": "/worldbestpartners/precache-manifest.c500ce788f0c8317667ca7ea02263f75.js",
     "service-worker.js": "/worldbestpartners/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/worldbestpartners/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.806ec030.chunk.css.map": "/worldbestpartners/static/css/main.806ec030.chunk.css.map",
+    "static/css/main.13353883.chunk.css.map": "/worldbestpartners/static/css/main.13353883.chunk.css.map",
     "static/media/App.css": "/worldbestpartners/static/media/SpoqaHanSansThin.a1a1697f.woff",
+    "static/media/dotmap.png": "/worldbestpartners/static/media/dotmap.6b229dc9.png",
     "static/media/mainVideo.mp4": "/worldbestpartners/static/media/mainVideo.c2629514.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.eeb15577.js",
     "static/css/2.764ccc25.chunk.css",
-    "static/js/2.23280284.chunk.js",
-    "static/css/main.806ec030.chunk.css",
-    "static/js/main.d509e03c.chunk.js"
+    "static/js/2.7079db64.chunk.js",
+    "static/css/main.13353883.chunk.css",
+    "static/js/main.4204425c.chunk.js"
   ]
 }
