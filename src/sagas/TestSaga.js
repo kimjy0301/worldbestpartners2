@@ -13,9 +13,7 @@ function* incrementInner() {
 }
 
 function* watchIncrement() {
-    yield console.log("saga");
     yield takeEvery(INCREMENTASYNC, incrementInner);
-    yield console.log("saga2");
 }
 
 

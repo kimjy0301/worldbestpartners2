@@ -1,11 +1,54 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import styled from 'styled-components';
+
+
+function fadeInNav(el) {
+    el.style.opacity = 0;
+    el.style.display = "flex";
+    (function fade() {
+        var val = parseFloat(el.style.opacity);
+        if (!((val += .1) > 1)) {
+            el.style.opacity = val;
+            setTimeout(fade, 40);
+        }
+    })();
+};
+
+function fadeIn(el) {
+    el.style.opacity = 0;
+    el.style.display = "block";
+    (function fade() {
+        var val = parseFloat(el.style.opacity);
+        if (!((val += .1) > 1)) {
+            el.style.opacity = val;
+            setTimeout(fade, 40);
+        }
+    })();
+};
+
+function fadeOut(el) {
+    el.style.opacity = 1;
+
+    (function fade() {
+        if ((el.style.opacity -= .1) < 0) {
+            el.style.display = "none";
+        } else {
+            setTimeout(fade, 10);
+        }
+    })();
+};
 
 
 const Nav = ({ navVisible, divRef }) => {
 
     const toggleRef = useRef();
     const btnRef = useRef();
+
+    const visibleRef = useCallback(node => {
+        if (node !== null) {
+            fadeInNav(node);
+        }
+    }, []);
 
     const onClickBtn2 = () => {
         const div1 = divRef.current;
@@ -23,7 +66,6 @@ const Nav = ({ navVisible, divRef }) => {
     }
 
     const scrollTop = () => {
-        console.log("object");
         window.scrollTo({
             'behavior': 'smooth',
             'left': 0,
@@ -31,29 +73,6 @@ const Nav = ({ navVisible, divRef }) => {
         });
     }
 
-    function fadeIn(el) {
-        el.style.opacity = 0;
-        el.style.display = "block";
-        (function fade() {
-            var val = parseFloat(el.style.opacity);
-            if (!((val += .1) > 1)) {
-                el.style.opacity = val;
-                setTimeout(fade, 40);
-            }
-        })();
-    };
-
-    function fadeOut(el) {
-        el.style.opacity = 1;
-
-        (function fade() {
-            if ((el.style.opacity -= .1) < 0) {
-                el.style.display = "none";
-            } else {
-                setTimeout(fade, 10);
-            }
-        })();
-    };
 
     const onClickToggleBtnRef = () => {
 
@@ -71,11 +90,11 @@ const Nav = ({ navVisible, divRef }) => {
         <>
             {navVisible ?
                 <div className="flex">
-                    <Navigation>
+                    <Navigation ref={visibleRef}>
                         <div className="flex  text-white mr-6 w-auto" >
                             <button onClick={scrollTop} className="flex flex-row">
                                 <svg className="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" /></svg>
-                                <span className="font text-2xl tracking-wide">Navigation</span>
+                                <span className="font text-2xl tracking-wide">WORLD BEST PARTNERS</span>
                             </button>
                         </div>
 
@@ -112,8 +131,6 @@ const Nav = ({ navVisible, divRef }) => {
 
     )
 }
-
-//<nav className="flex fixed w-full flex-wrap items-center bg-blue-900 p-6 justify-between shadow-xl rounded-b-lg z-50">
 
 const Navigation = styled.nav`
     display:flex;
