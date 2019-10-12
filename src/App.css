@@ -77,4 +77,10 @@ table {
     src: url(./css/fonts/SpoqaHanSansBold.woff) format('woff'),
          url(./css/fonts/SpoqaHanSansBold.woff2) format('woff2'),
          url(./css/fonts/SpoqaHanSansBold.ttf) format('truetype');
-  } 
+  }
+
+
+
+  .cursor{
+    color: aqua;
+  }

@@ -6,6 +6,7 @@ import Nav from './Nav';
 import LoadingOverlay from 'react-loading-overlay';
 import Typing from 'react-typing-animation';
 import dotMap from '../css/image/dotmap.png';
+import Cursor from 'react-typing-animation/dist/Cursor';
 
 const Main = () => {
 
@@ -70,7 +71,8 @@ const Main = () => {
 
                 <HEADER>
                     <H1Div>
-                        <Typing className="text-white" speed={20} onFinishedTyping={onFinishedTyping}>
+                        <Typing className="text-white" cursor={<CustomCursor className=""></CustomCursor>} speed={20} onFinishedTyping={onFinishedTyping}>
+                            <Typing.Delay ms={2000} />
                             <H2>가까이 할수록 편안합니다</H2>
                             <H2>힘들었던 어제가 있었기에 내일을 믿습니다</H2>
                             <H2>신선한 공기, 신나는 하루 → 서울랜드</H2>
@@ -115,6 +117,10 @@ const Main = () => {
         </>
     )
 }
+
+const CustomCursor = styled(Cursor)`
+    color : white !important;
+`
 
 const HEADER = styled.div`
             display:flex;
