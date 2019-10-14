@@ -32,8 +32,23 @@ const Header = ({ portfolioRef }) => {
     }
 
     const onFinishedTyping = () => {
-        moreBtnRef.current.classList.remove('hidden');
+
+        fadeIn(moreBtnRef.current);
+
     }
+
+    function fadeIn(el) {
+        el.style.opacity = 0;
+        el.style.display = "block";
+        (function fade() {
+            var val = parseFloat(el.style.opacity);
+            if (!((val += .1) > 1)) {
+                el.style.opacity = val;
+                setTimeout(fade, 40);
+            }
+        })();
+    };
+
 
     return (
         <>
@@ -54,7 +69,7 @@ const Header = ({ portfolioRef }) => {
                             <Typing.Delay ms={1000} />
                             <button className="animated 1 flash delay-1s" ref={mainRef} onClick={btnClick}><H1>WORLD BEST PARTNERS</H1></button>
                         </Typing>
-                        <Button ref={moreBtnRef} onClick={btnClick} className="hidden animated infinite pulse" >
+                        <Button ref={moreBtnRef} onClick={btnClick} className="opacity-0 animated infinite pulse" >
                             <Icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 16.172l-6.071-6.071-1.414 1.414L10 20l.707-.707 7.778-7.778-1.414-1.414L11 16.172V0H9z" /></Icon>
                             <HeaderH1>Click Here !</HeaderH1>
                         </Button>
