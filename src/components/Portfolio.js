@@ -18,7 +18,7 @@ const Portfolio = ({ portfolioRef }) => {
         <>
             <DIV1 ref={portfolioRef}>
                 <InnerDiv>
-                    <div data-aos="zoom-out" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <div data-aos="zoom-in" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
                         <img className="w-full" src={dotMap} alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="text-blue-500 font-bold text-xl mb-2">제목</div>
@@ -34,7 +34,7 @@ const Portfolio = ({ portfolioRef }) => {
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
                         </div>
                     </div>
-                    <div data-aos="zoom-out" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <div data-aos="zoom-in" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
                         <img className="w-full" src={dotMap} alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="text-blue-500 font-bold text-xl mb-2">제목</div>
@@ -50,7 +50,7 @@ const Portfolio = ({ portfolioRef }) => {
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
                         </div>
                     </div>
-                    <div data-aos="zoom-out" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <div data-aos="zoom-in" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
                         <img className="w-full" src={dotMap} alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="text-blue-500 font-bold text-xl mb-2">제목</div>
@@ -66,7 +66,7 @@ const Portfolio = ({ portfolioRef }) => {
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
                         </div>
                     </div>
-                    <div data-aos="zoom-out" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <div data-aos="zoom-in" className="mb-6  mt-6 max-w-sm rounded overflow-hidden shadow-lg bg-white">
                         <img className="w-full" src={dotMap} alt="Sunset in the mountains" />
                         <div className="px-6 py-4">
                             <div className="text-blue-500 font-bold text-xl mb-2">제목</div>
