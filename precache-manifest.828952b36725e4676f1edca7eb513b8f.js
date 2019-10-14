@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cda88b95594e6bcaa3e4c0ffa25a71af",
+    "revision": "be9c5b3e7a7459e08e63819e3e627611",
     "url": "/worldbestpartners/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/worldbestpartners/static/css/2.7183cefe.chunk.css"
   },
   {
-    "revision": "d7a23e08baa59ac6abb3",
-    "url": "/worldbestpartners/static/css/main.6a3b8cd0.chunk.css"
+    "revision": "c5518ba4b0decc380caf",
+    "url": "/worldbestpartners/static/css/main.cc4c0f59.chunk.css"
   },
   {
     "revision": "48e456c319acf47fd2f0",
     "url": "/worldbestpartners/static/js/2.6dcaeb20.chunk.js"
   },
   {
-    "revision": "d7a23e08baa59ac6abb3",
-    "url": "/worldbestpartners/static/js/main.74cdcfcc.chunk.js"
+    "revision": "c5518ba4b0decc380caf",
+    "url": "/worldbestpartners/static/js/main.654b2b0c.chunk.js"
   },
   {
     "revision": "6971ff071255c1d1b392",
