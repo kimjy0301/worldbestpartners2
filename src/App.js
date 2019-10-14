@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'normalize.css';
 import './App.css';
 import Main from './components/Main';
 import './css/tailwind.css';
 
 import { createGlobalStyle } from 'styled-components';
+
+import Mymodal from './components/modal/MyModal';
+import ModalPortal from './components/modal/ModalPortal';
+
 const GlobalStyles = createGlobalStyle`
   html {
     font-family:'Spoqa Han Sans', 'Sans-serif';
@@ -21,10 +25,27 @@ const GlobalStyles = createGlobalStyle`
 
 function App() {
 
+  const [modal, setModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setModal(true);
+  };
+  const handleCloseModal = () => {
+    setModal(false);
+  };
+
   return (
     <div className="App">
       <GlobalStyles />
       <Main></Main>
+      <button className="bg-gray-600" onClick={handleOpenModal}>열기</button>
+      {modal && (
+        <ModalPortal>
+          <Mymodal onCloseClick={handleCloseModal} />
+        </ModalPortal>
+      )}
+
+
     </div>
   );
 }
