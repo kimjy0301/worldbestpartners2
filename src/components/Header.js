@@ -42,7 +42,7 @@ const Header = ({ portfolioRef }) => {
         el.style.display = "block";
         (function fade() {
             var val = parseFloat(el.style.opacity);
-            if (!((val += .1) > 1)) {
+            if (!((val += .05) > 1)) {
                 el.style.opacity = val;
                 setTimeout(fade, 40);
             }
