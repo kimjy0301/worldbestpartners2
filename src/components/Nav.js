@@ -39,10 +39,13 @@ function fadeOut(el) {
 };
 
 
-const Nav = ({ navVisible, divRef }) => {
+const Nav = ({ navVisible, portfolioRef, contactRef }) => {
 
+    const mainBtnRef = useRef();
     const toggleRef = useRef();
-    const btnRef = useRef();
+    const toggleBtnRef = useRef();
+    const portfolioBtnRef = useRef();
+    const contactBtnRef = useRef();
 
     const visibleRef = useCallback(node => {
         if (node !== null) {
@@ -50,18 +53,11 @@ const Nav = ({ navVisible, divRef }) => {
         }
     }, []);
 
-    const onClickBtn2 = () => {
-        const div1 = divRef.current;
-        const topOffset = div1.offsetTop;
-        scrollIt(div1);
-        console.dir(topOffset);
-    }
-
     const scrollIt = (element) => {
         window.scrollTo({
             'behavior': 'smooth',
             'left': 0,
-            'top': element.offsetTop
+            'top': element.offsetTop - 80
         });
     }
 
@@ -73,17 +69,31 @@ const Nav = ({ navVisible, divRef }) => {
         });
     }
 
-
     const onClickToggleBtnRef = () => {
 
         const displayStatus = toggleRef.current.style.display;
-
         if (displayStatus === 'block') {
             fadeOut(toggleRef.current);
         } else {
             fadeIn(toggleRef.current);
         }
 
+        toggleBtnRef.current.blur();
+
+    }
+
+    const onClickMainBtn = () => {
+        scrollTop();
+        mainBtnRef.current.blur();
+    }
+    const OnClickPortfolioBtn = () => {
+        console.log(portfolioRef.current);
+        scrollIt(portfolioRef.current);
+        portfolioBtnRef.current.blur();
+    }
+    const OnClickContactBtn = () => {
+        scrollIt(contactRef.current);
+        contactBtnRef.current.blur();
     }
 
     return (
@@ -92,14 +102,14 @@ const Nav = ({ navVisible, divRef }) => {
                 <div className="flex">
                     <Navigation ref={visibleRef}>
                         <div className="flex  text-white mr-6 w-auto" >
-                            <button onClick={scrollTop} className="flex flex-row items-center">
+                            <button ref={mainBtnRef} onClick={onClickMainBtn} className="flex flex-row items-center">
                                 <svg className="fill-current h-5 w-5  mr-2 text-sm tracking-wide md:h-8  md:w-8 " width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" /></svg>
                                 <span className="font text-sm tracking-wide md:text-2xl">WORLD BEST PARTNERS</span>
                             </button>
                         </div>
 
                         <div onClick={onClickToggleBtnRef} className="flex w-auto lg:hidden">
-                            <button className="flex px-3 py-2 border rounded text-teal-200 border-teal-300 hover:text-white hover:border-white ">
+                            <button ref={toggleBtnRef} className="flex px-3 py-2 border rounded text-gray-200 border-gray-200 hover:text-white hover:border-white ">
                                 <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
                             </button>
                         </div>
@@ -107,21 +117,15 @@ const Nav = ({ navVisible, divRef }) => {
                         <div ref={toggleRef} className="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden opacity-0 lg:opacity-100">
                             <div className="flex-1 text-lg  justify-end items-end lg:flex ">
                                 <ButtonDiv>
-                                    <Button >First</Button>
+                                    <Button onClick={OnClickPortfolioBtn} ref={portfolioBtnRef} >Portfolio</Button>
                                 </ButtonDiv>
                                 <ButtonDiv>
-                                    <Button >Second</Button>
-                                </ButtonDiv>
-                                <ButtonDiv>
-                                    <Button >Third</Button>
-                                </ButtonDiv>
-                                <ButtonDiv>
-                                    <Button >Profile</Button>
+                                    <Button onClick={OnClickContactBtn} ref={contactBtnRef}>Contact</Button>
                                 </ButtonDiv>
                             </div>
-                            <div className="flex  items-center justify-end">
-                                <button ref={btnRef} onClick={onClickBtn2} className="text-left text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</button>
-                            </div>
+                            {/* <div className="flex  items-center justify-end">
+                                <button ref={btnRef} className="text-left text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</button>
+                            </div> */}
                         </div>
                     </Navigation>
                 </div>
