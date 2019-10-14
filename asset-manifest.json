@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/worldbestpartners/static/css/main.7477f8e0.chunk.css",
-    "main.js": "/worldbestpartners/static/js/main.a1f3859b.chunk.js",
-    "main.js.map": "/worldbestpartners/static/js/main.a1f3859b.chunk.js.map",
+    "main.js": "/worldbestpartners/static/js/main.2f01cb19.chunk.js",
+    "main.js.map": "/worldbestpartners/static/js/main.2f01cb19.chunk.js.map",
     "runtime-main.js": "/worldbestpartners/static/js/runtime-main.eeb15577.js",
     "runtime-main.js.map": "/worldbestpartners/static/js/runtime-main.eeb15577.js.map",
     "static/css/2.d05ae32b.chunk.css": "/worldbestpartners/static/css/2.d05ae32b.chunk.css",
-    "static/js/2.150b68ae.chunk.js": "/worldbestpartners/static/js/2.150b68ae.chunk.js",
-    "static/js/2.150b68ae.chunk.js.map": "/worldbestpartners/static/js/2.150b68ae.chunk.js.map",
+    "static/js/2.5a0e17f2.chunk.js": "/worldbestpartners/static/js/2.5a0e17f2.chunk.js",
+    "static/js/2.5a0e17f2.chunk.js.map": "/worldbestpartners/static/js/2.5a0e17f2.chunk.js.map",
     "index.html": "/worldbestpartners/index.html",
-    "precache-manifest.42db96da3a0a55eb66d1a199a2e81d70.js": "/worldbestpartners/precache-manifest.42db96da3a0a55eb66d1a199a2e81d70.js",
+    "precache-manifest.ecd231997454af12b36e0a12f7661f77.js": "/worldbestpartners/precache-manifest.ecd231997454af12b36e0a12f7661f77.js",
     "service-worker.js": "/worldbestpartners/service-worker.js",
     "static/css/2.d05ae32b.chunk.css.map": "/worldbestpartners/static/css/2.d05ae32b.chunk.css.map",
     "static/css/main.7477f8e0.chunk.css.map": "/worldbestpartners/static/css/main.7477f8e0.chunk.css.map",
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.eeb15577.js",
     "static/css/2.d05ae32b.chunk.css",
-    "static/js/2.150b68ae.chunk.js",
+    "static/js/2.5a0e17f2.chunk.js",
     "static/css/main.7477f8e0.chunk.css",
-    "static/js/main.a1f3859b.chunk.js"
+    "static/js/main.2f01cb19.chunk.js"
   ]
 }
