@@ -8,11 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 500;
   }
   
   .MyModal .content {
     background: gray;
     padding: 1rem;
-    width: 400px;
+    width: 50rem;
     height: auto;
   }

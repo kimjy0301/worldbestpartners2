@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import 'normalize.css';
 import './App.css';
 import Main from './components/Main';
@@ -25,17 +25,71 @@ const GlobalStyles = createGlobalStyle`
 
 function App() {
 
-  const [modal, setModal] = useState(false);
+  var keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
 
+  function preventDefault(e) {
+    e = e || window.event;
+    if (e.preventDefault)
+      e.preventDefault();
+    e.returnValue = false;
+  }
+
+  function keydown(e) {
+    for (var i = keys.length; i--;) {
+      if (e.keyCode === keys[i]) {
+        preventDefault(e);
+        return;
+      }
+    }
+  }
+
+  function wheel(e) {
+    preventDefault(e);
+  }
+
+  function disable_scroll() {
+    if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+    }
+    window.addEventListener('scroll', wheel, false);
+    document.onkeydown = keydown;
+    disable_scroll_mobile();
+  }
+
+  function enable_scroll() {
+    if (window.removeEventListener) {
+      window.removeEventListener('DOMMouseScroll', wheel, false);
+    }
+    window.removeEventListener('scroll', wheel, false);
+    enable_scroll_mobile();
+  }
+
+  // My improvement
+
+  // MOBILE
+  function disable_scroll_mobile() {
+    document.addEventListener('touchmove', preventDefault, false);
+  }
+  function enable_scroll_mobile() {
+    document.removeEventListener('touchmove', preventDefault, false);
+  }
+
+
+  const AppRef = useRef();
+  const [modal, setModal] = useState(false);
   const handleOpenModal = () => {
+    AppRef.current.classList.add('modal-open');
     setModal(true);
+    disable_scroll();
+
   };
   const handleCloseModal = () => {
     setModal(false);
+    enable_scroll();
   };
 
   return (
-    <div className="App">
+    <div ref={AppRef} className="App">
       <GlobalStyles />
       <Main></Main>
       <button className="bg-gray-600" onClick={handleOpenModal}>열기</button>
