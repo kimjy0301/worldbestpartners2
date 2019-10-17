@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import GoogleMapReact from 'google-map-react';
-import AOS from 'aos';
 import 'aos';
 import 'aos/dist/aos.css';
 
-const Marker = ({ text }) => {
-    useEffect(() => {
-        AOS.init({ duration: 1000 });
-        return () => {
-        };
-    }, []);
-
-
+const Marker = () => {
     return (
         <>
             <div className="flex flex-col justify-center items-center">
@@ -33,7 +25,7 @@ const Contact = ({ contactRef }) => {
         lat: 37.574597,
         lng: 126.979246
     };
-    const zoom = 17;
+    const zoom = 15;
 
     return (
         <>
