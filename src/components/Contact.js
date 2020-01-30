@@ -41,7 +41,7 @@ const Contact = ({ contactRef }) => {
                 <h1 className="text-4xl mt-8 mb-8 font-bold">CONTACT</h1>
                 <MapDIV data-aos="zoom-in">
                     <GoogleMapReact
-                        bootstrapURLKeys={{ key: 'AIzaSyD3UJYrNWIHkawVkMX1t7IqsTjasudevxM' }}
+                        bootstrapURLKeys={{ key: 'AIzaSyDKbjjUwIRNfRR933yEQ4UoL-EtlocgXbw' }}
                         defaultCenter={center}
                         defaultZoom={zoom}
                     >
@@ -132,12 +132,12 @@ const DIV = styled.div`
             margin-top:2rem;
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
-            color : white;
+            color : #edf2f7;
             background-image: url();
             background-size: 50rem;
             background-repeat: no-repeat;
             background-position:center;
-            background-color: #231f1f;
+            background-color: #2d3748;
             flex-direction:column;
             align-items:center;
         `;

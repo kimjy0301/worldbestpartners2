@@ -92,6 +92,9 @@ function App() {
     <div ref={AppRef} className="App">
       <GlobalStyles />
       <Main></Main>
+
+
+
       <button className="bg-gray-600" onClick={handleOpenModal}>열기</button>
       {modal && (
         <ModalPortal>
