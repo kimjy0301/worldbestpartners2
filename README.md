@@ -2,6 +2,4 @@
 
 React Web 개발
 
-https://kimjy0301.github.io/worldbestpartners/
-
-
+[바로가기](https://kimjy0301.github.io/worldbestpartners/)
